@@ -237,7 +237,6 @@ header {
 .btn-fila a.texto {
     color: var(--cafe);
     font-weight: 800;
-    text-decoration: underline;
     text-underline-offset: 4px;
 }
 
@@ -387,7 +386,7 @@ header {
     border-radius: 18px;
     background-color: var(--blanco);
     box-shadow: var(--sombra);
-    
+
 
 }
 .icono {
