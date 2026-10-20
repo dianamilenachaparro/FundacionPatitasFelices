@@ -25,13 +25,13 @@
   a {
     color: inherit;
     text-decoration: none;
-    
+
   }
 
   header {
     background-color: var(--blanco);
     color: var(--cafe);
-    padding: 1rem 4rem;
+    padding: 0;
   }
 
   ul {
@@ -54,39 +54,57 @@
   /* Estilos para el logo */
   .barra>a {
     font-size: 1.5rem;
-    font-weight: bold;
+    font-weight: 900;
     color: var(--cafe);
   }
 
-  .hero{
-    display:grid;
-    grid-template-columns: 1.5fr 0.8fr;
-    gap: 2rem;
-    align-items: center;
-    padding: 4rem 5rem;
+  .hero-fondo {
+    padding: 4rem 0;
+    /* el aire vertical lo pone la sección */
   }
 
-  h1{
+  .hero {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 3rem;
+    align-items: center;
+    padding: 0;
+    /* quita el 4rem 5rem de antes */
+  }
+
+  h1 {
     font-size: 3.5rem;
     margin-bottom: 1rem;
-  }
-  .lema{
-    margin-bottom: 1rem;
-  }
-  .descripcion{
-    margin-bottom: 1rem;
-
+    font-weight: 900;
   }
 
-  .eyebrow{
+  .lema {
+    margin-bottom: 1rem;
+    font-weight: 700;
+    font-size: 1.25rem;
+  }
+
+  .descripcion {
+    margin-bottom: 1rem;
+  }
+
+  .eyebrow {
+    display: block;
+    /* para que acepte margen abajo */
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
     color: var(--verde);
     text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: 0.09rem;
+    font-weight: 900;
   }
 
-  .btn{
-    
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 2.25rem;
+  }
+
+  .btn {
+
     padding: 0.75rem 1.5rem;
     border-radius: 2rem;
     display: inline-block;
@@ -94,58 +112,144 @@
     color: var(--cafe);
     border: 2px solid var(--naranja);
     font-weight: bold;
-    margin-bottom: 1rem;
   }
 
-  .btn-contacto{
+  .btn-contorno {
 
     background-color: var(--blanco);
     color: var(--verde);
     border: 2px solid var(--verde);
   }
 
-  img{
+  img {
     max-width: 100%;
-    height: 100%;
     display: block;
     object-fit: cover;
     border-radius: 1rem;
   }
-  .hero-tarjeta img{
+
+  .hero-tarjeta img {
     width: 100%;
-    aspect-ratio: 1/1;
+    aspect-ratio: 4/3;
     object-fit: cover;
     border-radius: 1rem;
   }
-  .hero-tarjeta{
+
+  .hero-tarjeta {
     background-color: var(--durazno);
     padding: 1.25rem;
     border-radius: 1.5rem;
   }
-  .tarjeta-titulo{
+
+  .tarjeta-titulo {
     font-weight: bold;
     margin-top: 1rem;
   }
-  .tarjeta-texto{
+
+  .tarjeta-texto {
     margin-top: 0.5rem;
     font-size: 0.9rem;
   }
 
-  .contenedor{
+  .contenedor {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 1.5rem;    
+    padding: 0 1.5rem;
   }
 
-  .barra{
+  .seccion {
+    padding: 4rem 0;
+  }
+
+  .barra {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 0;
   }
 
-  .hero-botones{
+  .hero-botones {
     display: flex;
     gap: 1rem;
     margin-top: 1.5rem;
+  }
+
+  .fondo-blanco {
+    background-color: var(--blanco);
+  }
+
+
+  /* Ventana: oculta las tarjetas que están fuera de vista */
+  .carrusel {
+    overflow: hidden;
+  }
+
+  /* Fila larga con todas las tarjetas; esta es la que se mueve */
+  .pista {
+    --paso: calc(100% / 3 + 0.5rem);
+    /* una tarjeta + la mitad del espacio entre tarjetas */
+    display: flex;
+    gap: 1.5rem;
+    animation: deslizar 9s ease-in-out infinite;
+  }
+
+  .carrusel:hover .pista {
+    animation-play-state: paused;
+    /* se detiene si pones el mouse encima */
+  }
+
+  /* Cada tarjeta mide exactamente un tercio de la ventana */
+  .paso {
+    flex: 0 0 calc((100% - 3rem) / 3);
+  }
+
+  .paso img {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    border-radius: 1rem;
+  }
+
+  .paso .eyebrow {
+    display: block;
+    margin-top: 0.75rem;
+    font-size: 0.8rem;
+  }
+
+  .paso h3 {
+    font-size: 1.25rem;
+    margin: 0.25rem 0;
+  }
+
+  .paso p {
+    font-size: 0.95rem;
+  }
+
+  /* Se queda quieta un momento y luego avanza una tarjeta */
+  @keyframes deslizar {
+
+    0%,
+    28% {
+      transform: translateX(0);
+    }
+
+    33%,
+    61% {
+      transform: translateX(calc(var(--paso) * -1));
+    }
+
+    66%,
+    94% {
+      transform: translateX(calc(var(--paso) * -2));
+    }
+
+    100% {
+      transform: translateX(calc(var(--paso) * -3));
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .pista {
+      animation: none;
+    }
   }
