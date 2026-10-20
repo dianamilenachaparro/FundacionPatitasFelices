@@ -224,6 +224,7 @@ header {
     background-color: var(--verde-oscuro);
     border-color: var(--verde-oscuro);
     transform: translateY(-2px);
+    color: white;
 }
 
 .btn-fila {
@@ -349,6 +350,11 @@ header {
     border-radius: 12px;
     background-color: var(--blanco);
     text-align: center;
+
+}
+.ficha-dentro:hover{
+   
+    transform: scale(1.1);
 }
 
 .ficha strong {
@@ -381,6 +387,18 @@ header {
     border-radius: 18px;
     background-color: var(--blanco);
     box-shadow: var(--sombra);
+    
+
+}
+.icono {
+  width: 3rem;
+  height: 3rem;
+  display: grid;                  /* truco rápido para centrar un solo hijo */
+  place-items: center;
+  border-radius: 50%;
+  background-color: var(--durazno);
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
 }
 
 .historia-grid .columna {
@@ -395,7 +413,7 @@ header {
 }
 
 .historia-grid p {
-    color: var(--gris);
+    color: var(#2E9A59);
     font-size: 1rem;
 }
 
@@ -404,9 +422,10 @@ header {
     font-size: 1.5rem;
 }
 
+
 .historia-grid .cita {
     margin-top: 18px;
-    color: var(--verde);
+    color: #2E9A59;
     font-size: 1.2rem;
     font-weight: 800;
     line-height: 1.4;
