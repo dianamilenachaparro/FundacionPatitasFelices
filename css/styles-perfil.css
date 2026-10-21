@@ -1,0 +1,758 @@
+
+/* ---------1. CONFIGURACIÓN GENERAL-------- */
+
+:root {
+    --verde: #52745b;
+    --verde-oscuro: #365541;
+    --durazno: #f7e5d6;
+    --crema: #fffaf5;
+    --blanco: #ffffff;
+    --cafe: #49372e;
+    --gris: #766d66;
+    --exito: #4d8a58;
+    --borde: #eadfd5;
+    --sombra: 0 8px 24px rgba(73, 55, 46, 0.08);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--crema);
+    color: var(--cafe);
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    margin: 12px 0 18px;
+}
+
+h2 {
+    font-size: clamp(1.7rem, 3vw, 2.4rem);
+    margin-bottom: 18px;
+}
+
+h3 {
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 12px;
+}
+
+
+/* --2. CONTENEDORES Y SECCIONES--*/
+
+.contenedor {
+    width: min(1120px, 100%);
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.seccion {
+    padding: 72px 0;
+}
+
+
+.bg-blanco {
+    background-color: var(--blanco);
+}
+
+.bg-durazno {
+    background-color: var(--durazno);
+}
+
+.salto {
+    position: absolute;
+    top: -100px;
+    left: 20px;
+    z-index: 1000;
+    background-color: var(--blanco);
+    padding: 12px 18px;
+    border-radius: 8px;
+}
+
+.salto:focus {
+    top: 20px;
+}
+
+
+/* --3. ENCABEZADO Y MENU-- */
+
+/* ENCABEZADO  de patitas felices */
+html {
+  scroll-behavior: smooth;
+}
+header {
+    background-color: #fffaf5;
+    border-bottom: 1px solid #eadfd5;
+}
+
+/* CONTENEDOR DEL ENCABEZADO */
+.barra {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    gap: 30px;
+    
+}
+
+/* NOMBRE Y SUBTÍTULO DE LA FUNDACIÓN */
+.marca {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    flex-shrink: 0;
+}
+
+/* NOMBRE: PATITAS FELICES */
+.marca a {
+    color: #3B2A20;
+    font-size: 28px;
+    font-weight: bold;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.marca p {
+    margin: 0;
+    color: #2F8F83;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* MENÚ A LA DERECHA */
+.barra nav {
+    margin-left: auto;
+    scroll-behavior: smooth;
+}
+
+/* LISTA DEL MENÚ */
+.barra nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 26px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* ENLACES DEL MENÚ */
+.barra nav ul li a {
+    color: #3B2A20;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color 0.3s ease;
+}
+
+/* EFECTO AL PASAR EL MOUSE */
+.barra nav ul li a:hover {
+    color: #52745b;
+}
+
+/* ADAPTACIÓN A PANTALLAS PEQUEÑAS */
+@media (max-width: 900px) {
+    .barra {
+        flex-wrap: wrap;
+    }
+
+    .barra nav {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .barra nav ul {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 15px 22px;
+    }
+}
+
+.barra nav ul {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 15px 22px;
+}
+
+
+/* DESPLAZAMIENTO SUAVE ENTRE APARTADOS */
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+/*4. BOTONES */
+
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 22px;
+    border: 2px solid var(#F28C38) ;
+    border-radius: 40px;
+    background-color: #F28C38;
+    color: black;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s ease,
+                background 0.2s ease,
+                color 0.2s ease;
+}
+
+.btn:hover {
+    background-color: var(--verde-oscuro);
+    border-color: var(--verde-oscuro);
+    transform: translateY(-2px);
+    color: white;
+}
+
+.btn-fila {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.btn-fila a.texto {
+    color: var(--cafe);
+    font-weight: 800;
+    text-underline-offset: 4px;
+}
+
+
+/* --5. MIGAS DE NAVEGACIÓN--*/
+
+.migas {
+    padding: 24px 0;
+    color: var(#2f8f32);
+    font-size: 0.9rem;
+}
+
+.migas a {
+    color: var(--verde);
+    font-weight: 700;
+}
+
+.migas span {
+    margin: 0 8px;
+}
+
+
+/* --6. PERFIL DE LUCAS--*/
+
+.perfil {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 48px;
+    padding: 24px 0 72px;
+}
+
+.perfil figure {
+    min-width: 0;
+}
+
+.perfil figure .foto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius: 20px;
+    background-color: #eadfd3;
+    color: var(--cafe);
+    box-shadow: var(--sombra);
+
+}
+
+.foto_copito img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10%;
+}
+.foto_mia img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 10%;
+}
+.foto_perla img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 10%;
+
+}
+.foto_saturno img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 10%;
+
+}
+.foto_aslan img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 10%;
+
+}
+.foto_tigreso img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 10%;
+
+}
+.perfil figure .foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.perfil figcaption {
+    margin-top: 12px;
+    color: var(--gris);
+    font-size: 0.95rem;
+}
+
+.estado {
+    display: inline-block;
+    padding: 6px 13px;
+    border-radius: 30px;
+    background-color: #e2f1e4;
+    color: var(--exito);
+    font-size: 0.85rem;
+    font-weight: 800;
+}
+
+.proceso {
+    display: inline-block;
+    padding: 6px 13px;
+    border-radius: 30px;
+    background-color: #e2f1e4;
+    color: #856404;
+    font-size: 0.85rem;
+    font-weight: 800;
+    background-color: #fff3cd;
+    transform: translateY(-5px) scale(1.05);
+    
+}
+
+.perfil .intro {
+    color: var(--gris);
+    font-size: 1.08rem;
+}
+
+.perfil .raza {
+    margin: 20px 0;
+    color: var(--gris);
+}
+
+.perfil .raza p {
+    margin-bottom: 5px;
+}
+
+.perfil .frase {
+    margin-top: 22px;
+    color: var(--verde-oscuro);
+    font-weight: 700;
+}
+
+
+/* --7. FICHA DE INFORMACIÓN-- */
+
+.ficha {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    margin: 26px 0;
+}
+
+.ficha > div {
+    padding: 16px 12px;
+    border: 1px solid var(--borde);
+    border-radius: 12px;
+    background-color: var(--blanco);
+    text-align: center;
+
+}
+.ficha-dentro:hover{
+   
+    transform: scale(1.1);
+}
+
+.ficha strong {
+    display: block;
+    margin-bottom: 4px;
+    color: var(--verde-oscuro);
+    font-size: 1.05rem;
+}
+
+.ficha span {
+    color: var(--gris);
+    font-size: 0.88rem;
+}
+
+
+/* --8. HISTORIA Y SALUD--*/
+
+.historia-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    align-items: stretch;
+    gap: 24px;
+}
+.tarjeta {
+    padding: 28px;
+    border: 1px solid var(--borde);
+    border-radius: 18px;
+    background-color: var(--blanco);
+    box-shadow: var(--sombra);
+}
+
+.tarjeta:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+}
+.icono {
+  width: 3rem;
+  height: 3rem;
+  display: grid;                  
+  place-items: center;
+  border-radius: 50%;
+  background-color: var(--durazno);
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.historia-grid .columna {
+    display: grid;
+    align-content: start;
+    gap: 24px;
+}
+
+.historia-grid h3 {
+    margin: 6px 0 10px;
+    font-size: 1.3rem;
+}
+
+.historia-grid p {
+    color: var(#2E9A59);
+    font-size: 1rem;
+}
+
+.historia-grid .icono {
+    margin-bottom: 8px;
+    font-size: 1.5rem;
+}
+
+
+.historia-grid .cita {
+    margin-top: 18px;
+    color: #2E9A59;
+    font-size: 1.2rem;
+    font-weight: 800;
+    line-height: 1.4;
+}
+
+.lista-check {
+    list-style: none;
+    padding: 0;
+    margin: 16px 0;
+}
+
+.lista-check li {
+    margin-bottom: 8px;
+    color: var(--cafe);
+    font-weight: 700;
+}
+
+.lista-check li::before {
+    content: "✓ ";
+    color: var(--exito);
+    font-weight: 900;
+}
+
+
+/* --9. PERSONALIDAD-- */
+
+.personalidad {
+    border-left: 5px solid var(--verde);
+}
+
+
+/* --10. PROCESO DE ADOPCIÓN--*/
+
+.pasos {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    margin: 28px 0;
+}
+
+.pasos .tarjeta {
+    padding: 24px;
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.pasos .tarjeta:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(73, 55, 46, 0.12);
+}
+
+.pasos h3 {
+    margin-bottom: 8px;
+    color: var(--verde-oscuro);
+    font-size: 1.1rem;
+}
+
+.pasos p {
+    margin-bottom: 0;
+    color: var(--gris);
+    font-size: 0.95rem;
+}
+
+.btn-fila {
+    margin-top: 24px;
+}
+
+
+/* --11. ANIMALES RELACIONADOS-- */
+
+.relacionados  {
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+    padding: 6px 2px 18px;
+    scroll-snap-type: x mandatory;
+   
+}
+
+
+
+.relacionados .animal {
+    flex: 0 0 calc((100% - 48px) / 3);
+    min-width: 250px;
+    overflow: hidden;
+    scroll-snap-align: start;
+  
+}
+
+.animal .foto :hover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    margin-bottom: 18px;
+    border-radius: 12px;
+    background-color: #eadfd3;
+    color: var(--cafe);
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease;
+} 
+
+.animal .foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.animal h3 {
+    margin-bottom: 6px;
+    color: var(--verde-oscuro);
+}
+
+.animal p {
+    margin-bottom: 10px;
+    color: var(--gris);
+    font-size: 0.92rem;
+}
+
+.etiqueta {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    background-color: #e2f1e4;
+    color: var(--exito);
+    font-size: 0.8rem;
+    font-weight: 800;
+}
+
+
+.animal .btn {
+    width: 100%;
+    margin-top: 16px;
+}
+
+
+/* --12. PIE DE PÁGINA-- */
+
+.footer {
+    padding: 28px 0;
+    background-color: var(--durazno);
+    font-size: 0.95rem;
+}
+
+.footer .contenedor {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.footer p {
+    margin-bottom: 0;
+}
+
+.footer a {
+    color: var(#2f8f32);
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.footer a:hover {
+    color: var(--verde);
+    text-decoration: underline;
+}
+
+.footer strong {
+    font-weight: 800;
+}
+
+
+/* --------------13. ADAPTACIÓN A CELULARES Y TABLETAS---------------*/
+
+@media (max-width: 1000px) {
+    .perfil {
+        grid-template-columns: 1fr 1fr;
+        gap: 28px;
+    }
+
+    .historia-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pasos {
+        grid-template-columns: 1fr;
+    }
+
+    .relacionados .animal {
+        flex-basis: 280px;
+    }
+}
+
+@media (max-width: 700px) {
+    .contenedor {
+        padding: 0 18px;
+    }
+
+    .seccion {
+        padding: 48px 0;
+    }
+
+    .navbar {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        gap: 12px 20px;
+    }
+
+    .perfil {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        padding-bottom: 48px;
+    }
+
+    .ficha {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 8px;
+    }
+
+    .ficha > div {
+        padding: 12px 6px;
+    }
+
+    .ficha span {
+        font-size: 0.8rem;
+    }
+
+    .tarjeta {
+        padding: 22px;
+    }
+
+    .relacionados .animal {
+        flex-basis: 85%;
+        min-width: 230px;
+    }
+
+    .footer .contenedor {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 380px) {
+    .ficha {
+        grid-template-columns: 1fr;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .btn-fila {
+        align-items: stretch;
+        flex-direction: column;
+    }
