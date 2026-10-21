@@ -1,7 +1,5 @@
 
-/* ========================================
-   1. CONFIGURACIÓN GENERAL
-======================================== */
+/* ---------1. CONFIGURACIÓN GENERAL-------- */
 
 :root {
     --verde: #52745b;
@@ -69,9 +67,7 @@ p {
 }
 
 
-/* ========================================
-   2. CONTENEDORES Y SECCIONES
-======================================== */
+/* --2. CONTENEDORES Y SECCIONES--*/
 
 .contenedor {
     width: min(1120px, 100%);
@@ -82,6 +78,7 @@ p {
 .seccion {
     padding: 72px 0;
 }
+
 
 .bg-blanco {
     background-color: var(--blanco);
@@ -263,9 +260,7 @@ html {
 }
 
 
-/* ========================================
-   5. MIGAS DE NAVEGACIÓN
-======================================== */
+/* --5. MIGAS DE NAVEGACIÓN--*/
 
 .migas {
     padding: 24px 0;
@@ -283,9 +278,7 @@ html {
 }
 
 
-/* ========================================
-   6. PERFIL DE LUCAS
-======================================== */
+/* --6. PERFIL DE LUCAS--*/
 
 .perfil {
     display: grid;
@@ -309,7 +302,9 @@ html {
     background-color: #eadfd3;
     color: var(--cafe);
     box-shadow: var(--sombra);
+
 }
+
 .foto_copito img{
     width: 100%;
     height: 100%;
@@ -329,7 +324,7 @@ html {
     border-radius: 10%;
 
 }
-.foto_bruno img{
+.foto_saturno img{
     width: 100%;
     height: 100%;
     object-fit: contain;
@@ -371,6 +366,7 @@ html {
     font-size: 0.85rem;
     font-weight: 800;
 }
+
 .proceso {
     display: inline-block;
     padding: 6px 13px;
@@ -405,9 +401,7 @@ html {
 }
 
 
-/* ========================================
-   7. FICHA DE INFORMACIÓN
-======================================== */
+/* --7. FICHA DE INFORMACIÓN-- */
 
 .ficha {
     display: grid;
@@ -442,9 +436,7 @@ html {
 }
 
 
-/* ========================================
-   8. HISTORIA Y SALUD
-======================================== */
+/* --8. HISTORIA Y SALUD--*/
 
 .historia-grid {
     display: grid;
@@ -452,20 +444,22 @@ html {
     align-items: stretch;
     gap: 24px;
 }
-
 .tarjeta {
     padding: 28px;
     border: 1px solid var(--borde);
     border-radius: 18px;
     background-color: var(--blanco);
     box-shadow: var(--sombra);
+}
 
-
+.tarjeta:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
 }
 .icono {
   width: 3rem;
   height: 3rem;
-  display: grid;                  /* truco rápido para centrar un solo hijo */
+  display: grid;                  
   place-items: center;
   border-radius: 50%;
   background-color: var(--durazno);
@@ -522,18 +516,14 @@ html {
 }
 
 
-/* ========================================
-   9. PERSONALIDAD
-======================================== */
+/* --9. PERSONALIDAD-- */
 
 .personalidad {
     border-left: 5px solid var(--verde);
 }
 
 
-/* ========================================
-   10. PROCESO DE ADOPCIÓN
-======================================== */
+/* --10. PROCESO DE ADOPCIÓN--*/
 
 .pasos {
     display: grid;
@@ -570,11 +560,9 @@ html {
 }
 
 
-/* ========================================
-   11. ANIMALES RELACIONADOS
-======================================== */
+/* --11. ANIMALES RELACIONADOS-- */
 
-.relacionados {
+.relacionados  {
     display: flex;
     gap: 24px;
     overflow-x: auto;
@@ -582,6 +570,8 @@ html {
     scroll-snap-type: x mandatory;
    
 }
+
+
 
 .relacionados .animal {
     flex: 0 0 calc((100% - 48px) / 3);
@@ -591,7 +581,7 @@ html {
   
 }
 
-.animal .foto {
+.animal .foto :hover {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -639,9 +629,7 @@ html {
 }
 
 
-/* ========================================
-   12. PIE DE PÁGINA
-======================================== */
+/* --12. PIE DE PÁGINA-- */
 
 .footer {
     padding: 28px 0;
@@ -680,9 +668,7 @@ html {
 }
 
 
-/* ========================================
-   13. ADAPTACIÓN A CELULARES Y TABLETAS
-======================================== */
+/* --------------13. ADAPTACIÓN A CELULARES Y TABLETAS---------------*/
 
 @media (max-width: 1000px) {
     .perfil {
