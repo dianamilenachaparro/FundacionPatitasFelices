@@ -109,6 +109,9 @@ p {
 /* --3. ENCABEZADO Y MENU-- */
 
 /* ENCABEZADO  de patitas felices */
+html {
+  scroll-behavior: smooth;
+}
 header {
     background-color: #fffaf5;
     border-bottom: 1px solid #eadfd5;
@@ -122,6 +125,7 @@ header {
     padding-top: 20px;
     padding-bottom: 20px;
     gap: 30px;
+    
 }
 
 /* NOMBRE Y SUBTÍTULO DE LA FUNDACIÓN */
@@ -139,6 +143,9 @@ header {
     font-size: 28px;
     font-weight: bold;
     text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 
@@ -153,6 +160,7 @@ header {
 /* MENÚ A LA DERECHA */
 .barra nav {
     margin-left: auto;
+    scroll-behavior: smooth;
 }
 
 /* LISTA DEL MENÚ */
@@ -166,16 +174,18 @@ header {
     padding: 0;
 }
 
+
 /* ENLACES DEL MENÚ */
 .barra nav ul li a {
-    color: #49372e;
+    color: #3B2A20;
     font-size: 15px;
     font-weight: bold;
     text-decoration: none;
     white-space: nowrap;
+    transition: color 0.3s ease;
 }
 
-/* EFECTO */
+/* EFECTO AL PASAR EL MOUSE */
 .barra nav ul li a:hover {
     color: #52745b;
 }
@@ -196,6 +206,18 @@ header {
         flex-wrap: wrap;
         gap: 15px 22px;
     }
+}
+
+.barra nav ul {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 15px 22px;
+}
+
+
+/* DESPLAZAMIENTO SUAVE ENTRE APARTADOS */
+html {
+    scroll-behavior: smooth;
 }
 
 
@@ -288,7 +310,46 @@ header {
     color: var(--cafe);
     box-shadow: var(--sombra);
 }
+.foto_copito img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10%;
+}
+.foto_mia img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 10%;
+}
+.foto_perla img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 10%;
 
+}
+.foto_bruno img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 10%;
+
+}
+.foto_aslan img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 10%;
+
+}
+.foto_tigreso img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 10%;
+
+}
 .perfil figure .foto img {
     width: 100%;
     height: 100%;
@@ -309,6 +370,18 @@ header {
     color: var(--exito);
     font-size: 0.85rem;
     font-weight: 800;
+}
+.proceso {
+    display: inline-block;
+    padding: 6px 13px;
+    border-radius: 30px;
+    background-color: #e2f1e4;
+    color: #856404;
+    font-size: 0.85rem;
+    font-weight: 800;
+    background-color: #fff3cd;
+    transform: translateY(-5px) scale(1.05);
+    
 }
 
 .perfil .intro {
@@ -507,6 +580,7 @@ header {
     overflow-x: auto;
     padding: 6px 2px 18px;
     scroll-snap-type: x mandatory;
+   
 }
 
 .relacionados .animal {
@@ -514,6 +588,7 @@ header {
     min-width: 250px;
     overflow: hidden;
     scroll-snap-align: start;
+  
 }
 
 .animal .foto {
@@ -526,7 +601,9 @@ header {
     border-radius: 12px;
     background-color: #eadfd3;
     color: var(--cafe);
-}
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease;
+} 
 
 .animal .foto img {
     width: 100%;
@@ -554,6 +631,7 @@ header {
     font-size: 0.8rem;
     font-weight: 800;
 }
+
 
 .animal .btn {
     width: 100%;
@@ -584,8 +662,12 @@ header {
 }
 
 .footer a {
-    color: var(--cafe);
+    color: var(#2f8f32);
     font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
 }
 
 .footer a:hover {
