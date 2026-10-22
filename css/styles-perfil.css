@@ -212,13 +212,6 @@ header {
 }
 
 
-/* DESPLAZAMIENTO SUAVE ENTRE APARTADOS */
-html {
-    scroll-behavior: smooth;
-}
-
-
-
 /*4. BOTONES */
 
 .btn {
@@ -756,3 +749,4 @@ html {
         align-items: stretch;
         flex-direction: column;
     }
+}
