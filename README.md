@@ -77,7 +77,7 @@ No requiere instalación ni dependencias.
 1. Clona el repositorio:
 
    ```bash
-   git clone <URL-del-repositorio>
+   git clone <https://github.com/dianamilenachaparro/FundacionPatitasFelices.git>
    cd patitas-felices
    ```
 
@@ -94,8 +94,6 @@ No requiere instalación ni dependencias.
 Al abrir el archivo directamente, necesitas conexión a internet solo para cargar la fuente Nunito desde Google Fonts. Sin ella, el sitio usa Arial.
 
 ## Capturas de pantalla
-
-> Reemplaza estas rutas por tus capturas en `docs/capturas/`.
 
 | Vista | Captura |
 | --- | --- |
