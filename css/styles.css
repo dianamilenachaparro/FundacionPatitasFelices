@@ -428,6 +428,7 @@
     width: 100%;
     aspect-ratio: 4 / 3;
     object-fit: cover;
+    object-position: center 10%;
     border-radius: 0.75rem;
   }
 
@@ -786,6 +787,7 @@
       flex-direction: column;
       gap: 0.75rem;
     }
+
     .barra ul {
       flex-wrap: wrap;
       justify-content: center;
@@ -830,4 +832,71 @@
       height: 2.5rem;
       font-size: 1.25rem;
     }
+  }
+
+
+
+
+
+  .gato-saludando {
+    width: 125.375px;
+    height: 124.5px;
+
+    background-image: url("../img/gato-sprite.png");
+    background-repeat: no-repeat;
+    background-size: 501.5px 124.5px;
+    position: relative;
+
+
+
+  }
+
+  .gato-saludando:hover {
+    animation: saludar 1s steps(4) infinite;
+  }
+
+  @keyframes saludar {
+    from {
+      background-position: 0 0;
+    }
+
+    to {
+      background-position: -501.5px 0;
+    }
+  }
+
+
+  .perro-saludando {
+    width: 124px;
+    height: 187px;
+
+    background-image: url("../img/perro-sprite.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 500px 187px;
+  }
+
+  .perro-saludando:hover {
+    animation: saludar-perro 0.8s steps(4) infinite;
+  }
+
+  @keyframes saludar-perro {
+    from {
+      background-position: 0 0;
+    }
+
+    to {
+      background-position: -500px 0;
+    }
+  }
+
+  .mascotas{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    gap: 2rem;
+  }
+  .mascotas img{
+    height: 200px;
+    width: auto;
   }

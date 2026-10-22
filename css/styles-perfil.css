@@ -192,13 +192,6 @@ nav a:hover {
 }
 
 
-/* DESPLAZAMIENTO SUAVE ENTRE APARTADOS */
-html {
-    scroll-behavior: smooth;
-}
-
-
-
 /*4. BOTONES */
 
 .btn {
