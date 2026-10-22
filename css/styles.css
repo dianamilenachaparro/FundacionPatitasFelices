@@ -428,6 +428,7 @@
     width: 100%;
     aspect-ratio: 4 / 3;
     object-fit: cover;
+    object-position: center 10%;
     border-radius: 0.75rem;
   }
 
@@ -896,6 +897,6 @@
     gap: 2rem;
   }
   .mascotas img{
-    height: 220px;
+    height: 200px;
     width: auto;
   }
