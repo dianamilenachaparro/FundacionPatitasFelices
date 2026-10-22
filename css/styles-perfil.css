@@ -70,9 +70,9 @@ p {
 /* --2. CONTENEDORES Y SECCIONES--*/
 
 .contenedor {
-    width: min(1120px, 100%);
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 24px;
+    padding: 0 1.5rem;
 }
 
 .seccion {
@@ -104,111 +104,91 @@ p {
 
 
 /* --3. ENCABEZADO Y MENU-- */
+/* Mismo encabezado que index.html (css/styles.css) */
 
-/* ENCABEZADO  de patitas felices */
-html {
-  scroll-behavior: smooth;
+header,
+footer {
+    font-family: "Nunito", Arial, sans-serif;
 }
+
+header .contenedor,
+footer .contenedor {
+    width: auto;
+    max-width: 1200px;
+    padding: 0 1.5rem;
+}
+
+/* En index.html el .barra no tiene relleno a los lados, solo arriba y abajo */
+header .barra {
+    padding: 1rem 0;
+}
+
 header {
-    background-color: #fffaf5;
-    border-bottom: 1px solid #eadfd5;
+    background-color: #FFFFFF;
+    color: #3B2A20;
+    border-bottom: 1px solid #F3E2CF;
+    box-shadow: 0 4px 16px rgba(59, 42, 32, 0.06);
 }
 
-/* CONTENEDOR DEL ENCABEZADO */
 .barra {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    gap: 30px;
-    
 }
 
-/* NOMBRE Y SUBTÍTULO DE LA FUNDACIÓN */
-.marca {
+.barra ul {
+    list-style-type: none;
+    display: flex;
+    gap: 0.5rem;
+}
+
+nav a {
+    display: inline-block;
+    padding: 0.45rem 1rem;
+    border-radius: 999px;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover {
+    background-color: #FFE3C7;
+    color: #2F8F83;
+}
+
+/* Logo: ícono + texto en fila */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.logo-icono {
+    width: 2.75rem;
+    height: 2.75rem;
+    display: grid;
+    place-items: center;
+    background-color: #FFE3C7;
+    border-radius: 50%;
+    font-size: 1.4rem;
+}
+
+.logo-texto {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 4px;
-    flex-shrink: 0;
 }
 
-/* NOMBRE: PATITAS FELICES */
-.marca a {
-    color: #3B2A20;
-    font-size: 28px;
-    font-weight: bold;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+.logo strong {
+    font-size: 1.4rem;
+    font-weight: 900;
+    line-height: 1.1;
 }
 
-
-.marca p {
-    margin: 0;
+.logo small {
+    font-size: 0.65rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
     color: #2F8F83;
-    font-size: 12px;
-    font-weight: bold;
-    letter-spacing: 1px;
-}
-
-/* MENÚ A LA DERECHA */
-.barra nav {
-    margin-left: auto;
-    scroll-behavior: smooth;
-}
-
-/* LISTA DEL MENÚ */
-.barra nav ul {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 26px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-
-/* ENLACES DEL MENÚ */
-.barra nav ul li a {
-    color: #3B2A20;
-    font-size: 15px;
-    font-weight: bold;
-    text-decoration: none;
-    white-space: nowrap;
-    transition: color 0.3s ease;
-}
-
-/* EFECTO AL PASAR EL MOUSE */
-.barra nav ul li a:hover {
-    color: #52745b;
-}
-
-/* ADAPTACIÓN A PANTALLAS PEQUEÑAS */
-@media (max-width: 900px) {
-    .barra {
-        flex-wrap: wrap;
-    }
-
-    .barra nav {
-        margin-left: 0;
-        width: 100%;
-    }
-
-    .barra nav ul {
-        justify-content: flex-start;
-        flex-wrap: wrap;
-        gap: 15px 22px;
-    }
-}
-
-.barra nav ul {
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    gap: 15px 22px;
 }
 
 
@@ -630,41 +610,46 @@ html {
 
 
 /* --12. PIE DE PÁGINA-- */
+/* Mismo pie de página que index.html (css/styles.css) */
 
-.footer {
-    padding: 28px 0;
-    background-color: var(--durazno);
-    font-size: 0.95rem;
+footer {
+    background-color: #FFE3C7;
+    color: #3B2A20;
+    padding: 2rem 0 1.25rem;
+    font-size: 18px;
 }
 
-.footer .contenedor {
+.pie {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    gap: 16px;
+    align-items: center;
+    gap: 1rem;
     flex-wrap: wrap;
 }
 
-.footer p {
-    margin-bottom: 0;
+.pie strong {
+    font-size: 1.15rem;
 }
 
-.footer a {
-    color: var(#2f8f32);
-    font-weight: 700;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-
+.pie a {
+    font-weight: bold;
 }
 
-.footer a:hover {
-    color: var(--verde);
+.pie a:hover {
     text-decoration: underline;
 }
 
-.footer strong {
-    font-weight: 800;
+/* Segunda fila del footer: derechos y créditos */
+.pie-creditos {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem 1.5rem;
+    flex-wrap: wrap;
+    margin-top: 1.25rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(59, 42, 32, 0.15);
+    font-size: 0.85rem;
+    opacity: 0.85;
 }
 
 
@@ -686,6 +671,14 @@ html {
 
     .relacionados .animal {
         flex-basis: 280px;
+    }
+
+    /* Footer: todo centrado en una columna */
+    .pie,
+    .pie-creditos {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
     }
 }
 
@@ -737,9 +730,34 @@ html {
         min-width: 230px;
     }
 
-    .footer .contenedor {
+    footer {
+        font-size: 16px;
+    }
+
+    header .contenedor,
+    header .barra,
+    footer .contenedor {
+        padding: 1rem 1.25rem;
+    }
+
+    /* Header: logo arriba, menú debajo */
+    .barra {
         flex-direction: column;
-        text-align: center;
+        gap: 0.75rem;
+    }
+
+    .barra ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.25rem 0.5rem;
+    }
+
+    nav a {
+        padding: 0.35rem 0.75rem;
+    }
+
+    .logo small {
+        display: none;
     }
 }
 
@@ -756,3 +774,4 @@ html {
         align-items: stretch;
         flex-direction: column;
     }
+}
