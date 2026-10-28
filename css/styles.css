@@ -901,7 +901,42 @@
     width: auto;
   }
 
+  /* PARCIAL */
+
   .lista-voluntario {
     display: block;
     margin-top: 0.5rem;
+  }
+
+  .lista-voluntario li {
+    position: relative;
+    padding-left: 1.75rem; 
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+  }
+
+  .areas {
+    border: none;
+    padding: 0;
+    min-width: 0;
+  }
+
+  .check {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1rem;
+    border: 2px solid #E3D3BF;
+    border-radius: 999px;
+    background-color: var(--blanco);
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: border-color 0.2s, background-color 0.2s;
+  }
+
+  .check input[type="checkbox"] {
+    width: 1.1rem;
+    height: 1.1rem;
+    padding: 0;
+    accent-color: var(--verde); 
   }

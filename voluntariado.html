@@ -10,10 +10,6 @@
         <link rel="stylesheet" href="css/styles.css">
     </head>
 
-
-
-
-
       <body>
         <header id="inicio">
           <div class="contenedor barra">
@@ -37,51 +33,123 @@
         </header>
 
         <main>
-            <section class="seccion">
-                <div class="contenedor">
-              
-                <title>Voluntariado </title>
-                <h1>Únete como voluntariado</h1>
-              <p class="lema">Tu tiempo puede cambiarle la vida a un perro o a un gato.</p>
-              <p class="descripcion">Sé parte del equipo que rescata, cuida y acompaña a cada animal hasta que encuentra una familia. No necesitas experiencia: solo ganas de ayudar.</p>
-              </div>
-            </section>
+            <section class="seccion" >
+                <div class="contenedor hero">
+           
+                  <div>
+                    <span class="eyebrow">Voluntariado Patitas Felices</span>
+                    <h1>Únete como Voluntario</h1>
+                    <p class="lema">Tu tiempo puede cambiarle la vida a un perro o a un gato.</p>
+                    <p class="descripcion">Sé parte del equipo que rescata, cuida y acompaña a cada animal hasta que
+                      encuentra una familia. No necesitas experiencia: solo ganas de ayudar.</p>
+                    <div class="hero-botones">
+                      <a class="btn" href="#inscripcion">Quiero inscribirme 🐾</a>
+                      <a class="btn btn-contorno" href="#informacion">Conoce más</a>
+                    </div>
+                  </div>
+           
+                  <div class="hero-tarjeta">
+                    <img src="img/gatoyperro.png" alt="Un niño abrazando a su perro">
+                    <p class="tarjeta-titulo">♡ Pequeñas acciones, grandes historias.</p>
+                    <p class="tarjeta-texto">Cada hora que nos regalas se convierte en cuidado, cariño y esperanza.</p>
+                  </div>
+           
+                </div>
+              </section>
 
             <section class="seccion fondo-blanco" id="informacion">
                 <div class="contenedor">
                   <span class="eyebrow">Antes de inscribirte</span>
                   <h2>Lo que recibes y lo que esperamos de ti</h2>
            
-                  <!-- .dos = cuadrícula de 2 columnas (1 en celular) -->
                   <div class="dos">
            
-                    <!-- Bloque 1: beneficios -->
                     <article class="tarjeta">
                       <div class="icono">🧡</div>
                       <h3>Beneficios de ser voluntario</h3>
                       <ul class="lista-voluntario">
-                        <li>Vives la satisfacción de ayudar a animales que lo necesitan.</li>
-                        <li>Aprendes sobre cuidado, manejo y bienestar animal.</li>
-                        <li>Conoces personas con tus mismos intereses y valores.</li>
-                        <li>Recibes un certificado de voluntariado al cumplir tus horas.</li>
-                        <li>Participas en jornadas de adopción y campañas de la fundación.</li>
+                        <li>✔ Vives la satisfacción de ayudar a animales que lo necesitan.</li>
+                        <li>✔ Aprendes sobre cuidado, manejo y bienestar animal.</li>
+                        <li>✔ Conoces personas con tus mismos intereses y valores.</li>
+                        <li>✔ Recibes un certificado de voluntariado al cumplir tus horas.</li>
+                        <li>✔ Participas en jornadas de adopción y campañas de la fundación.</li>
                       </ul>
                     </article>
-           
-                    <!-- Bloque 2: responsabilidades -->
+
                     <article class="tarjeta">
                       <div class="icono">🤝</div>
                       <h3>Responsabilidades y compromiso</h3>
                       <ul class="lista-voluntario">
-                        <li>Ser mayor de 18 años (o contar con autorización de un adulto).</li>
-                        <li>Cumplir el horario que elijas y avisar si no puedes asistir.</li>
-                        <li>Tratar a los animales y al equipo con respeto y paciencia.</li>
-                        <li>Seguir las normas de higiene y seguridad de la fundación.</li>
-                        <li>Comprometerte al menos 4 horas al mes durante tres meses..</li>
+                        <li>✔ Ser mayor de 18 años (o contar con autorización de un adulto).</li>
+                        <li>✔ Cumplir el horario que elijas y avisar si no puedes asistir.</li>
+                        <li>✔ Tratar a los animales y al equipo con respeto y paciencia.</li>
+                        <li>✔ Seguir las normas de higiene y seguridad de la fundación.</li>
+                        <li>✔ Comprometerte al menos 4 horas al mes durante tres meses.</li>
                       </ul>
                     </article>
            
                   </div>
+                </div>
+              </section>
+              <section class="seccion" id="inscripcion">
+                <div class="contenedor">
+                  <span class="eyebrow">Da el primer paso</span>
+                  <h2>Inscríbete como voluntario</h2>
+                  <p class="intro">Déjanos tus datos y nos pondremos en contacto contigo para contarte cómo empezar.</p>
+           
+   
+                  <form class="tarjeta formulario formulario-voluntario" action="#" method="get">
+                    <h3>Formulario de inscripción</h3>
+                    <p class="nota"><span class="req">*</span> Campos obligatorios.</p>
+           
+                    <div class="campo">
+                      <label for="nombre">Nombre completo <span class="req">*</span></label>
+                      <input type="text" id="nombre" name="nombre" placeholder="Tu nombre y apellidos" required>
+                    </div>
+           
+                    <div class="fila">
+                      <div class="campo">
+                        <label for="ciudad">Ciudad <span class="req">*</span></label>
+                        <input type="text" id="ciudad" name="ciudad" placeholder="Tu ciudad" required>
+                      </div>
+                      <div class="campo">
+                        <label for="correo">Correo electrónico <span class="req">*</span></label>
+                        <input type="email" id="correo" name="correo" placeholder="nombre@correo.com" required>
+                      </div>
+                    </div>
+
+                    <div class="campo">
+                      <label for="disponibilidad">Disponibilidad horaria <span class="req">*</span></label>
+                      <select id="disponibilidad" name="disponibilidad" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="fines-de-semana">Fines de semana</option>
+                        <option value="entre-semana">Entre semana</option>
+                        <option value="ambos">Ambos</option>
+                      </select>
+                    </div>
+
+                    <div class="campo areas">
+                      <label for="areasinteres">Área de interés</label>
+                      <div class="checks">
+                        <label class="check">
+                          <input type="checkbox" name="area" value="cuidado-animal">
+                          <span>🐶 Cuidado animal</span>
+                        </label>
+                        <label class="check">
+                          <input type="checkbox" name="area" value="logistica">
+                          <span>📦 Logística</span>
+                        </label>
+                        <label class="check">
+                          <input type="checkbox" name="area" value="campanas">
+                          <span>📣 Campañas</span>
+                        </label>
+                      </div>
+                    </div>
+           
+                    <p class="nota">Usaremos tus datos solo para contactarte sobre el voluntariado. Nunca los compartiremos con
+                      terceros.</p>
+                    <button class="btn" type="submit">Quiero ser voluntario 💌</button>
+                  </form>
                 </div>
               </section>
         </main>
