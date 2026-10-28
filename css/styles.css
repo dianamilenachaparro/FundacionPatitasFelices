@@ -900,3 +900,8 @@
     height: 200px;
     width: auto;
   }
+
+  .lista-voluntario {
+    display: block;
+    margin-top: 0.5rem;
+  }
