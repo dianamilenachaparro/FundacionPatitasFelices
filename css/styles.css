@@ -183,6 +183,18 @@
     margin-top: 1rem;
   }
 
+  .hero-tarjeta > .tarjeta-titulo {
+    color:var(--verde);
+    font-weight: bold;
+    margin-top: 1rem;
+  }
+
+  .hero-tarjeta > .tarjeta-texto {
+    color:var(--verde);
+    font-weight: bold;
+    margin-top: 1rem;
+  }
+
   .tarjeta-texto {
     margin-top: 0.5rem;
     font-size: 0.9rem;
@@ -627,7 +639,23 @@
     font-weight: 900;
     border-radius: 50%;
     box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s, background-color 0.2s;
+    transition: 
+    .info-contacto strong {
+      display: block;
+      font-size: 0.85rem;
+    }
+  
+    .info-contacto p {
+      margin-bottom: 0.75rem;
+    }
+  
+    .info-contacto a {
+      color: var(--verde);
+      font-weight: bold;
+    }
+  
+  
+    /* ---------- transform 0.2s, background-color 0.2s;
     z-index: 10;
     /* para que quede por encima del resto del contenido */
   }
@@ -900,3 +928,586 @@
     height: 200px;
     width: auto;
   }
+
+  
+  
+
+
+/* 1. parcial .................. */
+
+:root {
+    --verde: #52745b;
+    --verde-oscuro: #365541;
+    --durazno: #f7e5d6;
+    --crema: #fffaf5;
+    --blanco: #ffffff;
+    --cafe: #49372e;
+    --gris: #766d66;
+    --naranja: #f4a261;
+    --borde: #eadfd5;
+    --sombra: 0 10px 30px rgba(73, 55, 46, 0.08);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body.donaciones {
+    font-family: "Nunito", Arial, sans-serif;
+    background: var(--crema);
+    color: var(--cafe);
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.donaciones a {
+    text-decoration: none;
+}
+
+.donaciones h1,
+.donaciones h2,
+.donaciones h3 {
+    line-height: 1.25;
+}
+
+.donaciones p {
+    margin-bottom: 12px;
+}
+
+
+/* 2. CONTENEDOR */
+
+.donaciones .contenedor {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+
+/* 3. ENCABEZADO Y NAVEGACIÓN */
+
+.donaciones header#inicio {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.97);
+    border-bottom: 1px solid var(--borde);
+    box-shadow: 0 3px 16px rgba(73, 55, 46, 0.05);
+}
+
+.donaciones .barra {
+    min-height: 88px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.donaciones .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--cafe);
+    flex-shrink: 0;
+}
+
+.donaciones .logo-icono {
+    width: 50px;
+    height: 50px;
+    display: grid;
+    place-items: center;
+    border-radius: 16px;
+    background: var(--durazno);
+    font-size: 25px;
+}
+
+.donaciones .logo-texto {
+    display: flex;
+    flex-direction: column;
+}
+
+.donaciones .logo strong {
+    font-size: 1.25rem;
+    font-weight: 900;
+    line-height: 1.3;
+}
+
+.donaciones .logo small {
+    color: var(--verde);
+    font-size: 0.65rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.donaciones nav ul {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    list-style: none;
+}
+
+.donaciones nav a {
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 30px;
+    color: var(--cafe);
+    font-size: 0.95rem;
+    font-weight: 800;
+    transition: 0.25s ease;
+}
+
+.donaciones nav a:hover {
+    background: var(--durazno);
+    color: var(--verde-oscuro);
+}
+
+
+/* 4. BANNER PRINCIPAL */
+
+.donaciones .banner {
+    position: relative;
+    overflow: hidden;
+    margin: 28px auto 0;
+    max-width: 1400px;
+    padding: 110px 25px;
+    border-radius: 24px;
+    background:
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(244, 162, 97, 0.24),
+            transparent 28%
+        ),
+        linear-gradient(
+            125deg,
+            #263f30 0%,
+            #52745b 60%,
+            #365541 100%
+        );
+    color: var(--blanco);
+    text-align: center;
+}
+
+.donaciones .contenido-banner {
+    position: relative;
+    z-index: 1;
+    max-width: 780px;
+    margin: auto;
+}
+
+.donaciones .contenido-banner h1 {
+    max-width: 720px;
+    margin: 0 auto 22px;
+    font-size: clamp(2.5rem, 5vw, 4.2rem);
+    font-weight: 900;
+    letter-spacing: -1.5px;
+}
+
+.donaciones .contenido-banner p {
+    max-width: 650px;
+    margin: 0 auto 32px;
+    color: #f5f4ec;
+    font-size: 1.1rem;
+    line-height: 1.9;
+}
+
+
+/* 5. BOTONES */
+
+.donaciones .boton,
+.donaciones .boton-donar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50px;
+    padding: 13px 28px;
+    border: 2px solid var(--naranja);
+    border-radius: 50px;
+    background: var(--naranja);
+    color: #30251d;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 900;
+    cursor: pointer;
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.donaciones .boton:hover,
+.donaciones .boton-donar:hover {
+    transform: translateY(-3px);
+    background: #ffc184;
+    border-color: #ffc184;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.donaciones .boton:focus-visible,
+.donaciones .boton-donar:focus-visible,
+.donaciones nav a:focus-visible {
+    outline: 3px solid var(--naranja);
+    outline-offset: 4px;
+}
+
+
+/* 6. SECCIÓN INFORMATIVA */
+
+.donaciones .informacion {
+    max-width: 1200px;
+    margin: auto;
+    padding: 95px 24px;
+    text-align: center;
+}
+
+.donaciones .titulo-seccion {
+    max-width: 720px;
+    margin: 0 auto 48px;
+}
+
+.donaciones .titulo-seccion h2 {
+    margin-bottom: 18px;
+    color: var(--verde-oscuro);
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-weight: 900;
+    letter-spacing: -0.7px;
+}
+
+.donaciones .titulo-seccion p {
+    color: var(--gris);
+    font-size: 1.05rem;
+}
+
+
+/* 7. TARJETAS */
+
+.donaciones .contenedor-bloques {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    align-items: stretch;
+}
+
+.donaciones .bloque {
+    padding: 35px 27px;
+    border: 1px solid var(--borde);
+    border-radius: 22px;
+    border-bottom: 4px solid var(--naranja);
+    background: var(--blanco);
+    box-shadow: var(--sombra);
+    text-align: left;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.donaciones .bloque:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 18px 38px rgba(73, 55, 46, 0.12);
+}
+
+.donaciones .bloque .icono {
+    width: 64px;
+    height: 64px;
+    display: grid;
+    place-items: center;
+    margin-bottom: 24px;
+    border-radius: 19px;
+    background: var(--durazno);
+    font-size: 2rem;
+}
+
+.donaciones .bloque h3 {
+    margin-bottom: 15px;
+    color: var(--verde-oscuro);
+    font-size: 1.3rem;
+    font-weight: 900;
+}
+
+.donaciones .bloque p {
+    color: var(--gris);
+    font-size: 0.96rem;
+    line-height: 1.85;
+}
+
+.donaciones .bloque p strong {
+    color: var(--verde);
+}
+
+
+/* 8. FORMULARIO DE DONACIÓN */
+
+.donaciones .seccion-donacion {
+    padding: 90px 24px;
+    background:
+        linear-gradient(
+            135deg,
+            #f7e5d6,
+            #fff3e7
+        );
+}
+
+.donaciones .formulario-contenedor {
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 42px;
+    border: 1px solid rgba(234, 223, 213, 0.9);
+    border-radius: 25px;
+    background: var(--blanco);
+    box-shadow: 0 20px 55px rgba(73, 55, 46, 0.10);
+}
+
+.donaciones .formulario-contenedor h2 {
+    margin-bottom: 14px;
+    color: var(--verde-oscuro);
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    font-weight: 900;
+    text-align: center;
+}
+
+.donaciones .formulario-contenedor > p {
+    margin-bottom: 30px;
+    color: var(--gris);
+    text-align: center;
+}
+
+.donaciones .campo {
+    margin-bottom: 23px;
+    text-align: left;
+}
+
+.donaciones .campo label {
+    display: block;
+    margin-bottom: 9px;
+    color: var(--cafe);
+    font-size: 0.95rem;
+    font-weight: 900;
+}
+
+.donaciones .campo input,
+.donaciones .campo select {
+    width: 100%;
+    min-height: 52px;
+    padding: 13px 15px;
+    border: 1px solid var(--borde);
+    border-radius: 12px;
+    background: #fffdfb;
+    color: var(--cafe);
+    font-family: inherit;
+    font-size: 1rem;
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.donaciones .campo input::placeholder {
+    color: #a69a91;
+}
+
+.donaciones .campo input:focus,
+.donaciones .campo select:focus {
+    outline: none;
+    border-color: var(--verde);
+    box-shadow: 0 0 0 4px rgba(82, 116, 91, 0.12);
+}
+
+.donaciones .boton-donar {
+    width: 100%;
+    margin-top: 5px;
+    min-height: 54px;
+}
+
+.donaciones .nota-formulario {
+    margin: 20px 0 0;
+    padding: 13px;
+    border-radius: 10px;
+    background: var(--crema);
+    color: var(--gris);
+    font-size: 0.83rem;
+    line-height: 1.6;
+    text-align: center;
+}
+
+
+/* 9. MENSAJE FINAL */
+
+.donaciones .mensaje-final {
+    margin: 65px 24px;
+    padding: 65px 24px;
+    border-radius: 24px;
+    background: var(--verde-oscuro);
+    color: var(--blanco);
+    text-align: center;
+}
+
+.donaciones .mensaje-final h2 {
+    margin-bottom: 18px;
+    font-size: clamp(1.8rem, 4vw, 2.7rem);
+    font-weight: 900;
+}
+
+.donaciones .mensaje-final p {
+    max-width: 700px;
+    margin: 0 auto;
+    color: #e9eee9;
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+
+/* 10. PIE DE PÁGINA */
+
+.donaciones .pie-pagina {
+    padding: 30px 20px;
+    background: #2b382e;
+    color: #f8f5ef;
+    text-align: center;
+}
+
+.donaciones .pie-pagina p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+
+/* 11. TABLETAS */
+
+@media (max-width: 900px) {
+    .donaciones .contenedor-bloques {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .donaciones .bloque:last-child {
+        grid-column: 1 / -1;
+    }
+
+    .donaciones .barra {
+        gap: 15px;
+    }
+
+    .donaciones nav a {
+        padding: 9px 10px;
+        font-size: 0.88rem;
+    }
+
+    .donaciones .informacion {
+        padding: 70px 24px;
+    }
+}
+
+
+/* 12. CELULARES */
+
+@media (max-width: 650px) {
+    .donaciones .barra {
+        flex-direction: column;
+        justify-content: center;
+        gap: 15px;
+        padding-top: 18px;
+        padding-bottom: 18px;
+    }
+
+    .donaciones nav {
+        width: 100%;
+    }
+
+    .donaciones nav ul {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    .donaciones nav a {
+        padding: 8px 11px;
+        font-size: 0.85rem;
+    }
+
+    .donaciones .banner {
+        margin-top: 15px;
+        padding: 70px 20px;
+        border-radius: 18px;
+    }
+
+    .donaciones .contenido-banner h1 {
+        font-size: 2.35rem;
+        letter-spacing: -0.8px;
+    }
+
+    .donaciones .contenido-banner p {
+        font-size: 1rem;
+    }
+
+    .donaciones .informacion {
+        padding: 60px 18px;
+    }
+
+    .donaciones .titulo-seccion {
+        margin-bottom: 30px;
+    }
+
+    .donaciones .contenedor-bloques {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .donaciones .bloque:last-child {
+        grid-column: auto;
+    }
+
+    .donaciones .bloque {
+        padding: 28px 24px;
+    }
+
+    .donaciones .seccion-donacion {
+        padding: 55px 15px;
+    }
+
+    .donaciones .formulario-contenedor {
+        padding: 30px 20px;
+        border-radius: 20px;
+    }
+
+    .donaciones .mensaje-final {
+        margin: 35px 12px;
+        padding: 45px 20px;
+        border-radius: 18px;
+    }
+}
+
+
+/* 13. CELULARES PEQUEÑOS */
+
+@media (max-width: 380px) {
+    .donaciones .contenedor {
+        padding: 0 14px;
+    }
+
+    .donaciones .logo strong {
+        font-size: 1.1rem;
+    }
+
+    .donaciones .logo small {
+        font-size: 0.56rem;
+    }
+
+    .donaciones .contenido-banner h1 {
+        font-size: 1.9rem;
+    }
+
+    .donaciones .formulario-contenedor {
+        padding: 24px 15px;
+    }
+
+    .donaciones nav a {
+        padding: 7px 9px;
+        font-size: 0.8rem;
+    }
+}

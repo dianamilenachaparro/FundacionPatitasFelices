@@ -1,0 +1,219 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Donaciones-Patitas Felices</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+    
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="donaciones"> 
+    <!--inicio donaciones-->
+    <header id="inicio">
+        <div class="contenedor barra">
+          <a class="logo" href="#inicio">
+            <span class="logo-icono">🐾</span>
+            <span class="logo-texto">
+              <strong>Patitas Felices</strong>
+              <small>FUNDACIÓN · RESCATE Y ADOPCIÓN</small>
+            </span>
+          </a>
+          <nav>
+            <ul>
+              <li><a href="#inicio">Inicio</a></li>
+              <li><a href="#adopta">Adopta</a></li>
+              <li><a href="#nosotros">Nosotros</a></li>
+              <li><a href="#contacto">Contacto</a></li>
+            </ul>
+          </nav>
+        </div>
+    </header>
+
+    <!-- ENCABEZADO -->
+    <header class="encabezado">
+        <div class="contenedor">
+            <h2 class="logo">🐾 Patitas Felices</h2>
+
+            <nav class="navegacion">
+                <a href="index.html">Inicio</a>
+                <a href="#informacion">¿Por qué donar?</a>
+                <a href="#donacion">Donaciones</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="seccion">
+            <div class="contenedor hero banner">
+                <div class="contenido-banner">
+                    <h1>Ayúdanos a cambiar vidas</h1>
+    
+                    <p>
+                        Cada donación es una oportunidad para ofrecer alimento,
+                        protección y un hogar lleno de amor a nuestros animales.
+                    </p>
+    
+                    <a href="#donacion" class="boton">
+                        Quiero ayudar
+                    </a>
+                </div>
+      
+            
+      
+              <div class="hero-tarjeta">
+                <img src="img/gatoyperro.png" alt="Un niño abrazando a su perro">
+                <p class="tarjeta-titulo">♡ Su próxima historia puede empezar contigo.</p>
+                <p class="tarjeta-texto">Adoptar es sumar una vida a la tuya.</p>
+              </div>
+      
+            </div>
+          </section>
+
+        <!-- INFORMACIÓN SOBRE LAS DONACIONES -->
+        <section class="informacion" id="informacion">
+            <div class="titulo-seccion">
+                <h2>Tu ayuda hace la diferencia</h2>
+
+                <p>
+                    Con tu apoyo podemos seguir cuidando y protegiendo
+                    a los animales que más lo necesitan.
+                </p>
+            </div>
+
+            <div class="contenedor-bloques">
+                <!-- BLOQUE 1 -->
+                <article class="bloque">
+                    <div class="icono">❤️</div>
+                    <h3>¿Por qué donar?</h3>
+                    <p>
+                        Donar es una forma de demostrar amor, 
+                        solidaridad y compromiso con quienes más lo necesitan.
+                        Cada aporte, por pequeño que sea, puede hacer una gran 
+                        diferencia en la vida de muchos
+                        animales que esperan una segunda oportunidad.
+                    </p>
+                </article>
+
+                <!-- BLOQUE 2 -->
+                <article class="bloque">
+                    <div class="icono">🐶</div>
+                    <h3>¿Cómo usamos las donaciones?</h3>
+                    <p>
+                        Utilizamos las donaciones para comprar alimentos,
+                        medicamentos, pagar tratamientos veterinarios,
+                        mantener nuestros espacios de cuidado y apoyar
+                        los procesos de adopción.
+                    </p>
+                </article>
+
+                <!-- BLOQUE 3 -->
+                <article class="bloque">
+                    <div class="icono">🐾</div>
+                    <h3>Impacto en cifras</h3>
+                    <p>
+                        Cada aporte contribuye a nuestra misión.
+                        Trabajamos para rescatar más animales,
+                        mejorar su bienestar y encontrar hogares
+                        responsables para ellos.
+                    </p>
+                    <p>
+                        <strong>¡Cada granito de arena cuenta!</strong>
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <!-- FORMULARIO DE DONACIÓN -->
+        <section class="seccion-donacion" id="donacion">
+            <div class="formulario-contenedor">
+                <h2>Haz tu donación</h2>
+                <p>
+                    Completa el siguiente formulario para simular
+                    tu aporte a Patitas Felices.
+                </p>
+
+                <form action="#" method="get">
+                    <div class="campo">
+                        <label for="nombre">Nombre completo</label>
+                        <input
+                            type="text"
+                            id="nombre"
+                            name="nombre"
+                            placeholder="Escribe tu nombre completo"
+                            autocomplete="name"
+                            required
+                        >
+                    </div>
+
+                    <div class="campo">
+                        <label for="correo">Correo electrónico</label>
+                        <input
+                            type="email"
+                            id="correo"
+                            name="correo"
+                            placeholder="ejemplo@correo.com"
+                            autocomplete="email"
+                            required
+                        >
+                    </div>
+
+                    <div class="campo">
+                        <label for="monto">Monto de donación (COP)</label>
+                        <input
+                            type="number"
+                            id="monto"
+                            name="monto"
+                            placeholder="Ejemplo: 20000"
+                            min="1"
+                            step="1"
+                            required
+                        >
+                    </div>
+
+                    <div class="campo">
+                        <label for="metodo">Método de donación</label>
+                        <select id="metodo" name="metodo" required>
+                            <option value="">Selecciona un método</option>
+                            <option value="transferencia">Transferencia</option>
+                            <option value="tarjeta">Tarjeta</option>
+                            <option value="efectivo">Efectivo</option>
+                        </select>
+                    </div>
+
+                    <button type="button" class="boton-donar">
+                        Donar ahora
+                    </button>
+
+                    <p class="nota-formulario">
+                        Este formulario es una demostración académica.
+                        No procesa pagos reales ni envía información.
+                    </p>
+                </form>
+            </div>
+        </section>
+
+        <!-- MENSAJE FINAL -->
+        <section class="mensaje-final">
+            <h2>Juntos podemos cambiar muchas vidas</h2>
+            <p>
+                Gracias por ser parte de esta misión.
+                ¡Nuestros amigos de cuatro patas cuentan contigo!
+            </p>
+        </section>
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="pie-pagina">
+        <p>
+            &copy; 2026 Fundación Patitas Felices.
+            Todos los derechos reservados.
+        </p>
+    </footer>
+</body>
+</html>
